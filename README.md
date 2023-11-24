@@ -1,3 +1,9 @@
+# THIS PROJECT IS NOW DEPRECATED
+
+I am no longer invested into the `flake8` as a tool, as I have moved to using `ruff`.
+
+And I strongly recommend running QC tools as a separate step. Integrating flake8 into the unittest framework looks like a false economy to me nowdays.
+
 pytest plugin for efficiently checking PEP8 compliance
 ===============
 
