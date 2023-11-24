@@ -40,5 +40,5 @@ setuptools.setup(
         "flake8>=4.0",
         "pytest>=7.0",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.8",
 )
