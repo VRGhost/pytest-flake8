@@ -258,7 +258,6 @@ class Flake8Error(Exception):
 
 
 class Flake8FileCollector(pytest.File):
-
     flake8_config: PytestFlake8Settings
 
     def __init__(self, *args, flake8_config: PytestFlake8Settings, **kwargs):
@@ -304,7 +303,6 @@ class Flake8FileCollector(pytest.File):
 
 
 class Flake8Item(pytest.Item):
-
     parent: Flake8FileCollector
     target_path: Path = None
     flake8_config = property(lambda self: self.parent.flake8_config)
@@ -364,7 +362,7 @@ class Ignorer:
 
     def __call__(self, path: Path):
         l = []  # noqa: E741
-        for (glob, ignlist) in self.ignores:
+        for glob, ignlist in self.ignores:
             if not glob or fnmatch.fnmatch(path, f"**{os.sep}{glob}"):
                 if "__ALL__" in ignlist:
                     # Completely ignore the path
